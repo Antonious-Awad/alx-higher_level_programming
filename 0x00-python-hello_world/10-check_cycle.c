@@ -7,23 +7,22 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *tmp = list, *safety_node = NULL;
+	listint_t *slow = NULL, *fast = NULL;
 	size_t counter = 0, safety_counter = 0;
 
-	while (tmp)
-	{
-		tmp = tmp->next;
-		counter++;
-		safety_node = list;
-		safety_counter = 0;
+	if (!list)
+		return (0);
 
-		while (safety_counter < counter)
-		{
-			if (safety_node == tmp)
-				return (1);
-			safety_node = safety_node->next;
-			safety_counter++;
-		}
+	slow = list;
+	fast = list->next;
+
+	while (fast && fast->next && slow)
+	{
+		if (slow == fast)
+			return (1);
+
+		slow = slow->next;
+		fast = fast->next;
 	}
 
 	return (0);
