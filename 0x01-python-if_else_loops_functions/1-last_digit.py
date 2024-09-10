@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 lastDig = abs(number) % 10
-if lastDig < 0:
+if number < 0:
     lastDig = -lastDig
 if lastDig > 5:
     str = "is greater than 5"
