@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for alpha in range(97, 113):
+for alpha in range(ord('a'), ord('z')+1):
     print(chr(alpha), end="")
