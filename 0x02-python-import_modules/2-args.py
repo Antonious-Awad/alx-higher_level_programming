@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    argc = sys.argv.__len__()
+    argc = len(sys.argv)-1
     nArgMsg = "argument"
 
     if argc != 1:
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     else:
         nArgMsg += ":"
 
-    print("{:d} ".format(argc-1) + nArgMsg)
+    print("{:d} ".format(argc) + nArgMsg)
 
-    for arg in range(1, argc):
-        print("{:d}: {}".format(arg, sys.argv[arg]))
+    for arg in range(argc):
+        print("{:d}: {}".format(arg+1, sys.argv[arg+1]))
