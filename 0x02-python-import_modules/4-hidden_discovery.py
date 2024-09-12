@@ -5,6 +5,5 @@ if __name__ == "__main__":
     dirs = dir(hidden_4)
 
     for directory in dir:
-        if directory[:2] == "__":
-            continue
-        print(directory)
+        if directory[:2] != "__":
+            print(directory)
