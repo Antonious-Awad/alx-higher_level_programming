@@ -46,7 +46,7 @@ void print_python_bytes(PyObject *p)
  */
 void print_python_list(PyObject *p)
 {
-	long int listLen = PyList_Size(p), i;
+	long int listLen = ((PyVarObject *)p)->ob_size, i;
 	PyListObject *list = (PyListObject *)p;
 	PyObject *listItem;
 
