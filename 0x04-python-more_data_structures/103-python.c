@@ -24,18 +24,19 @@ void print_python_bytes(PyObject *p)
 	printf("  size: %ld\n", size);
 	printf("  trying string: %s\n", str);
 
-	if (size < limit)
+	if (size >= 10)
+		limit = 10;
+	else
 		limit = size + 1;
 
 	printf("  first %ld bytes:", limit);
 
 	for (i = 0; i < limit; i++)
-	{
 		if (str[i] >= 0)
 			printf("  %02x", str[i]);
 		else
 			printf("  %02x", str[i] + 256);
-	}
+
 	printf("\n");
 }
 
@@ -45,10 +46,9 @@ void print_python_bytes(PyObject *p)
  */
 void print_python_list(PyObject *p)
 {
-	long int listLen = PyList_Size(p);
+	long int listLen = PyList_Size(p), i;
 	PyListObject *list = (PyListObject *)p;
 	PyObject *listItem;
-	int i;
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %ld\n", listLen);
