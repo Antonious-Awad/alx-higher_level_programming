@@ -32,9 +32,9 @@ void print_python_bytes(PyObject *p)
 
 	for (i = 0; i < limit; i++)
 		if (str[i] >= 0)
-			printf("  %02x", str[i]);
+			printf(" %02x", str[i]);
 		else
-			printf("  %02x", str[i] + 256);
+			printf(" %02x", 256 + str[i]);
 
 	printf("\n");
 }
