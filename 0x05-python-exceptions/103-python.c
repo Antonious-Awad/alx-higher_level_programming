@@ -9,17 +9,16 @@
 void print_python_float(PyObject *p)
 {
 	double val = 0;
-	char *str;
+	char *str = NULL;
 
 	fflush(stdout);
 	printf("[.] float object info\n");
 
-	if (!PyFloat_Check(p))
+	if (!PyFloat_CheckExact(p))
 	{
 		printf("  [ERROR] Invalid Float Object\n");
 		return;
 	}
-
 	val = ((PyFloatObject *)p)->ob_fval;
 	str = PyOS_double_to_string(val, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
 	printf("  value: %s\n", str);
@@ -80,7 +79,7 @@ void print_python_list(PyObject *p)
 		printf("[*] Allocated = %lu\n", list->allocated);
 		for (i = 0; i < listLen; i++)
 		{
-			listItem = PyList_GetItem(p, i);
+			listItem = PyList_GET_ITEM(p, i);
 			printf("Element %ld: %s\n", i, (listItem->ob_type)->tp_name);
 			if (PyBytes_Check(listItem))
 				print_python_bytes(listItem);
