@@ -68,14 +68,17 @@ class Node:
             raise TypeError("next_node must be a Node object")
 
 
-      """SinglyLinkedList class
+"""SinglyLinkedList class
 
-      Returns:
-          SinglyLinkedList: single linked list
-      """
+    Returns:
+        SinglyLinkedList: single linked list
+"""
+
+
 class SinglyLinkedList:
     """Signly linked list
-    """  
+    """
+
     def __init__(self):
         """ Instantiation of linked list"""
         self.__head: Node = None
