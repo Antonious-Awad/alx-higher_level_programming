@@ -5,11 +5,12 @@
 class Square:
     """ Square """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """initialize square
 
         Args:
             size (int): size of the square
+            position (tuple): position in a cartesian plane
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -34,6 +35,19 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """ getter for position attribute """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if (not isinstance(value, tuple)
+                or len(value) != 2
+                or not all(isinstance(x, int) for x in value)
+                or all(num < 0 for num in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """ prints a square"""
