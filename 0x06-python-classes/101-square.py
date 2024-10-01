@@ -71,12 +71,13 @@ class Square:
 
     def __str__(self) -> str:
         """ prints a square"""
+        res = ""
         if self.__size == 0:
-            print()
-            return
+            return (res)
         for i in range(self.position[1]):
-            print()
+            res += "\n"
         for i in range(self.__size):
-            print(" " * self.position[0],
-                  end="") if self.position[0] > 0 else None
-            print("#" * self.__size)
+            res += (" " * self.position[0])
+            res += ("#" * self.__size)
+            res += "\n"
+        return (res)
