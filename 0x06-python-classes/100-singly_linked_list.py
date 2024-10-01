@@ -113,7 +113,7 @@ class SinglyLinkedList:
             return
 
         curr = self.__head
-        while curr.next_node and curr.data < new.data:
+        while (curr.next_node and curr.next_node.data < new.data):
             curr = curr.next_node
 
         new.next_node = curr.next_node
