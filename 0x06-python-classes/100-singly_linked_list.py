@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Node Class
 
     Raises:
