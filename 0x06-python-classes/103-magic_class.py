@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import math
-
 """MagicClass"""
+
+import math
 
 
 class MagicClass:
@@ -9,8 +9,14 @@ class MagicClass:
     """
 
     def __init__(self, radius=0) -> None:
-        """instantiate"""
+        """inistantiate
 
+        Args:
+            radius (int or float, optional): radius. Defaults to 0.
+
+        Raises:
+            TypeError: radius must be a number
+        """
         self.__radius = 0
 
         if type(radius) is not int or type(radius) is not float:
