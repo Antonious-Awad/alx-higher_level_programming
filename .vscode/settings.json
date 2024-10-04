@@ -1,0 +1,22 @@
+{
+  "C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+  "editor.comments.insertSpace": false,
+  "cSpell.words": [
+    "BLANKLINE",
+    "diagsums",
+    "listint",
+    "nodeint",
+    "strtow",
+    "Traceback",
+    "wildcmp"
+  ],
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./0x07-python-test_driven_development/tests",
+    "-p",
+    "*_test.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true
+}

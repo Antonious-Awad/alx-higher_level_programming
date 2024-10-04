@@ -1,0 +1,38 @@
+{
+  "ALX Snippet": {
+    "prefix": "alx",
+    "body": [
+      "#include \"lists.h\"",
+      "/**",
+      " * func - desc",
+      " * @n: desc",
+      " */",
+      "",
+      ""
+    ],
+    "description": "ALX Snippet"
+  },
+  "python-path": {
+    "prefix": "pyalx",
+    "body": [
+      "#!/usr/bin/python3"
+    ],
+    "description": "python-path"
+  },
+  "python-path-main": {
+    "prefix": "pymainalx",
+    "body": [
+      "#!/usr/bin/python3",
+      "if __name__ == \"__main__\":"
+    ],
+    "description": "python-path"
+  },
+  "python-path-fun": {
+    "prefix": "pyfunalx",
+    "body": [
+      "#!/usr/bin/python3",
+      "def ${1:function}(${2:params}):"
+    ],
+    "description": "python-path"
+  }
+}
