@@ -34,33 +34,41 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(res, 'tony')
 
     def test_singleString(self):
+        """ Test for string """
         res = max_integer("TONY")
         self.assertEqual(res, "Y")
 
     def test_floatList(self):
+        """ Test for float list"""
         res = max_integer([1.2, 2.4, 8.9])
         self.assertEqual(res, 8.9)
 
     def test_complexList(self):
+        """ Test for complex list"""
         self.assertRaises(TypeError, max_integer, [2, 3.9, "Tony"])
 
     def test_single(self):
+        """ Test for single element list"""
         res = max_integer([9])
         self.assertEqual(res, 9)
 
     def test_tuple(self):
+        """ Test for tuple"""
         res = max_integer((2, 9, 1))
         self.assertEqual(res, 9)
 
     def test_dict(self):
+        """ Test for dictionary"""
         variable = {"first": 1, "second": 2}
         self.assertRaises(KeyError, max_integer, variable)
 
     def test_matrix(self):
+        """ Test for matrix """
         res = max_integer([[4, 5, 6], [3, 4, 5]])
         self.assertEqual(res, [4, 5, 6])
 
     def test_emptyString(self):
+        """ Test for empty string """
         res = max_integer("")
         self.assertEqual(res, None)
 
@@ -76,4 +84,6 @@ class TestMaxInteger(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    """main function
+    """
     unittest.main()
