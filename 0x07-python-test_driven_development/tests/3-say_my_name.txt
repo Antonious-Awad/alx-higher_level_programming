@@ -1,5 +1,5 @@
 ====================================
-Test Cases for 2-matrix_divided module
+Test Cases for 3-say_my_name
 ==================================== 
 
 This module define 1 function called ``say_my_name(first_name, last_name="")``
@@ -14,7 +14,7 @@ Possible Cases
 6. don't pass any arguments
 
 ===========
-Basic Usage
+Usage
 ===========
 
 Passing 2 strings
