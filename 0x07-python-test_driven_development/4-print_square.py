@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""print_square module"""
+
+
 def print_square(size):
+    """prints a square
+
+    Raises:
+        TypeError: if size is not int
+        ValueError: if value < 0
+    """
 
     if not isinstance(size, int):
         raise TypeError('size must be an integer')
