@@ -58,3 +58,9 @@ Cases
 	>>> bg.integer_validator([23, 4, 5], [5, 4])
 	Traceback (most recent call last):
 	TypeError: [23, 4, 5] must be an integer
+
+- none
+
+    >>> bg.integer_validator(None, [5,4])
+    Traceback (most recent call last):
+    TypeError: None must be an integer
