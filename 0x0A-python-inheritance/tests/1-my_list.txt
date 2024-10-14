@@ -17,13 +17,14 @@ List Appending
 
 
 List Sorting
-    >>> print(my_list.print_sorted())
+    >>> my_list.print_sorted()
     [0, 1, 2, 3, 4]
 
 Adding a string to the list
 	>>> my_list.append("HI")
 	>>> print(my_list)
     [1, 4, 2, 3, 5, 'HI']
+    
 
 when trying to call the ``print_sorted()`` method
 it would raise an error because it can't compare a string
