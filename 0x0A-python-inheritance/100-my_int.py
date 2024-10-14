@@ -3,11 +3,6 @@
 
 
 class MyInt(int):
-    def __init__(self):
-        """Insanitation of MyInt
-        """
-        super().__init__()
-
     def __eq__(self, value):
         """equal operation
 
@@ -17,7 +12,7 @@ class MyInt(int):
         Returns:
             boolean: result of comparison
         """
-        return self.real != value
+        return super().__ne__(value)
 
     def __ne__(self, value):
         """not equal operation
@@ -28,4 +23,4 @@ class MyInt(int):
         Returns:
             boolean: result of comparison
         """
-        return self.real == value
+        return super().__eq__(value)
