@@ -12,7 +12,7 @@ class MyInt(int):
         Returns:
             boolean: result of comparison
         """
-        return super().__ne__(value)
+        return self.real != value
 
     def __ne__(self, value):
         """not equal operation
@@ -23,4 +23,4 @@ class MyInt(int):
         Returns:
             boolean: result of comparison
         """
-        return super().__eq__(value)
+        return self.real == value
