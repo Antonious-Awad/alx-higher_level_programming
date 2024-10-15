@@ -12,4 +12,4 @@ def class_to_json(obj):
         dict: dictionary representation
     """
 
-    return dict(obj)
+    return obj.__dict__
